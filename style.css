@@ -3,6 +3,7 @@
 :root {
   --violet: hsl(257, 40%, 49%);
   --soft-magenta: hsl(300, 69%, 71%);
+  --content-width: 1400px;
 }
 
 * {
@@ -12,5 +13,57 @@
 }
 
 body {
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header nav {
+  width: 90%;
+  max-width: var(--content-width);
+  height: 70px;
+
+  display: flex;
+  justify-items: flex-start;
+  align-items: center;
+}
+
+.huddle-introduction {
   background: url(/images/bg-desktop.svg) var(--violet);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 140px;
+}
+
+.introduction-content {
+  width: 90%;
+  max-width: var(--content-width);
+  display: flex;
+}
+
+.introduction-content > :nth-child(1) {
+  flex: 1.2;
+  background-color: red;
+}
+
+.introduction-content > :nth-child(1) img{
+  width: 100%;
+  /* max-width: 100%; */
+}
+
+.introduction-content > :nth-child(2) {
+  flex: 1;
+  background-color: yellow;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
 }
