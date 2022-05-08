@@ -14,19 +14,14 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-}
-
-header {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  background: center / cover url(/images/bg-desktop.svg) var(--violet);
 }
 
 header nav {
   width: 90%;
   max-width: var(--content-width);
   height: 70px;
+  margin: 3rem auto 0;
 
   display: flex;
   justify-items: flex-start;
@@ -34,32 +29,60 @@ header nav {
 }
 
 .huddle-introduction {
-  background: url(/images/bg-desktop.svg) var(--violet);
-  min-height: 100vh;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
-  padding-top: 140px;
+  padding-top: 3rem;
 }
 
 .introduction-content {
   width: 90%;
+  margin: 0 auto;
   max-width: var(--content-width);
   display: flex;
 }
 
-.introduction-content > :nth-child(1) {
+.introduction-content .image-container {
   flex: 1.2;
-  background-color: red;
+  /* background-color: red; */
 }
 
-.introduction-content > :nth-child(1) img{
+.introduction-content .image-container img {
   width: 100%;
   /* max-width: 100%; */
 }
 
-.introduction-content > :nth-child(2) {
+.introduction-content .content-container {
   flex: 1;
-  background-color: yellow;
+  padding: 3rem 3rem;
+  /* background-color: yellow; */
+  color: #fff;
+}
+
+.introduction-content h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.introduction-content .content-container p {
+  line-height: 1.7;
+}
+
+.introduction-content .register-btn {
+  background-color: #fff;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  color: var(--violet);
+  border-radius: 1000px;
+  text-decoration: none;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.introduction-content .register-btn:hover {
+  background-color: var(--soft-magenta);
+  color: #fff;
+  transition: all 0.3s;
 }
 
 h1,
