@@ -3,7 +3,8 @@
 :root {
   --violet: hsl(257, 40%, 49%);
   --soft-magenta: hsl(300, 69%, 71%);
-  --content-width: 1400px;
+  --content-width: 90%;
+  --content-width-max: 1400px;
 }
 
 * {
@@ -18,8 +19,8 @@ body {
 }
 
 header nav {
-  width: 90%;
-  max-width: var(--content-width);
+  width: var(--content-width);
+  max-width: var(--content-width-max);
   height: 70px;
   margin: 3rem auto 0;
 
@@ -29,32 +30,28 @@ header nav {
 }
 
 .huddle-introduction {
-  /* display: flex; */
   justify-content: center;
   padding-top: 3rem;
 }
 
 .introduction-content {
-  width: 90%;
+  width: var(--content-width);
   margin: 0 auto;
-  max-width: var(--content-width);
+  max-width: var(--content-width-max);
   display: flex;
 }
 
 .introduction-content .image-container {
   flex: 1.2;
-  /* background-color: red; */
 }
 
 .introduction-content .image-container img {
   width: 100%;
-  /* max-width: 100%; */
 }
 
 .introduction-content .content-container {
   flex: 1;
   padding: 3rem 3rem;
-  /* background-color: yellow; */
   color: #fff;
 }
 
@@ -97,8 +94,8 @@ footer {
 }
 
 footer div {
-  width: 90%;
-  max-width: var(--content-width);
+  width: var(--content-width);
+  max-width: var(--content-width-max);
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
@@ -107,10 +104,10 @@ footer div {
 
 ion-icon {
   display: flex;
-  font-size: 24px;
-  padding: 8px;
+  font-size: 20px;
+  padding: 10px;
   color: #fff;
-  transition: all .3s;
+  transition: all 0.3s;
   cursor: pointer;
   border: 1px solid #fff;
   border-radius: 50%;
@@ -119,10 +116,43 @@ ion-icon {
 ion-icon:hover {
   color: var(--soft-magenta);
   border-color: var(--soft-magenta);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
-.fb {
-  /* filter: invert(1); */
-  /* opacity: -1; */
+@media screen and (max-width: 768px) {
+  :root {
+    --content-width: 80%;
+  }
+
+  body {
+    background: top / contain url(/images/bg-mobile.svg) var(--violet) no-repeat;
+  }
+
+  header nav {
+    margin-top: 1.4rem;
+  }
+  nav img {
+    max-width: 10rem;
+  }
+
+  .introduction-content {
+    flex-direction: column;
+  }
+
+  .introduction-content .image-container {
+    margin-bottom: 2rem;
+    /* flex: 1; */
+  }
+
+  .introduction-content .content-container {
+    /* flex: 1; */
+    /* padding: 3rem 3rem; */
+    /* color: #fff; */
+    padding: 0;
+    text-align: center;
+  }
+
+  .introduction-content h1 {
+    font-size: 2rem;
+  }
 }
