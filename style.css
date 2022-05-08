@@ -94,12 +94,35 @@ h3 {
 }
 
 footer {
-  background-color: red;
 }
 
 footer div {
-  background-color: blue;
   width: 90%;
   max-width: var(--content-width);
   margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+ion-icon {
+  display: flex;
+  font-size: 24px;
+  padding: 8px;
+  color: #fff;
+  transition: all .3s;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+ion-icon:hover {
+  color: var(--soft-magenta);
+  border-color: var(--soft-magenta);
+  transition: all .3s;
+}
+
+.fb {
+  /* filter: invert(1); */
+  /* opacity: -1; */
 }
