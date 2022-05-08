@@ -91,6 +91,7 @@ h3 {
 }
 
 footer {
+  margin-bottom: 3rem;
 }
 
 footer div {
@@ -137,6 +138,7 @@ ion-icon:hover {
 
   .introduction-content {
     flex-direction: column;
+    margin-bottom: 4.5rem;
   }
 
   .introduction-content .image-container {
@@ -145,14 +147,21 @@ ion-icon:hover {
   }
 
   .introduction-content .content-container {
-    /* flex: 1; */
-    /* padding: 3rem 3rem; */
-    /* color: #fff; */
     padding: 0;
     text-align: center;
   }
 
-  .introduction-content h1 {
-    font-size: 2rem;
+  .introduction-content .content-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .introduction-content .content-container p {
+    line-height: 2;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  footer div {
+    justify-content: center;
   }
 }
