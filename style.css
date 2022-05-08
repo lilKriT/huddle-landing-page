@@ -15,7 +15,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: center / cover url(/images/bg-desktop.svg) var(--violet);
+  background: center / cover url(images/bg-desktop.svg) var(--violet);
 }
 
 header nav {
@@ -126,7 +126,7 @@ ion-icon:hover {
   }
 
   body {
-    background: top / contain url(/images/bg-mobile.svg) var(--violet) no-repeat;
+    background: top / contain url(images/bg-mobile.svg) var(--violet) no-repeat;
   }
 
   header nav {
